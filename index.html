@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="navstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar(event)"><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/>
+                  </svg>
+                  </a></li>
+                <li><a href="#home" >Home</a></li>
+                <li><a href="#about" >About</a></li>
+                <li><a href="#services" >Services</a></li>
+                <li><a href="#skills" >Skills</a></li>
+                <li><a href="#contact" >Contactme</a></li>   
+            </ul>
+            <ul>
+                <li class="Portfolio"><a href="#" >Portfolio</a></li>
+                <li class="hideOnMobile"><a href="#home"  >Home</a></li>
+                <li class="hideOnMobile"><a href="#about" >About</a></li>
+                <li class="hideOnMobile"><a href="#services" >Services</a></li>
+                <li class="hideOnMobile"><a href="#skills" >Skills</a></li>
+                <li class="hideOnMobile"><a href="#contact" >Contact me</a></li>   
+                <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="26">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/>
+                  </svg>
+                  </a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <script>
+        let savedScrollPosition = 0;
+
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            setTimeout(() => {
+            // Restore the scroll position
+            window.scrollTo(0, savedScrollPosition);
+        }, 0); 
+        }
+
+        function hideSidebar(event){
+            event.preventDefault();
+            savedScrollPosition = window.scrollY;
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            savedScrollPosition = window.scrollY;
+        }
+    </script>
+  
+
+    <section class="home" id="home">
+        <div class="home-content">
+            
+            <h3>Hello,It's me</h3>
+            <h1>Shane Perera</h1>
+            <h3>Welcome to my Portfolio</h3>
+            <h1>I am Shane Perera</h1>
+            <h3>and I'm a <span class="text"></span></h3>
+            <p> I'm a Software Engineering undergraduate who is passionate about web development on front end and back end<br>
+            </p>
+            
+            <div class="home-sci">
+                <a href="https://www.facebook.com/profile.php?id=100089335065695" style="--i:6"><i class='bx bxl-facebook' style='color:#0f639b' ></i></a>
+                <a href="https://www.instagram.com/shane___perera/" style="--i:7"><i class='bx bxl-instagram' style='color:#0f639b' ></i></a>
+                <a href=" https://wa.me/qr/ZHUGKGT7ZHBQD1 " style="--i:8"><i class='bx bxl-whatsapp' style='color:#0f639b' ></i></a>
+                <a href="https://www.linkedin.com/in/shane-perera-9394872b7/" style="--i:9"><i class='bx bxl-linkedin' style='color:#0f639b' ></i></a>
+            </div>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+
+        <div class="myimg">
+            <img  src="shane.jpg" >
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="g1.jpg" width="100%">
+        </div>
+        <div class="about-text">
+            <h2>About<span>me</span></h2>
+            <h4>Front-End Developer!</h4>
+            <p>I'm a Student who are willing to learn Software Engineering techniques and
+                willing to gather data and knowledge about coding skills etc.Throughout my career,I would 
+                like to be a genius from my side.Looking forward,I aspire to carve my path as a developer,
+                aiming to vlend creatiivity  with technical expertise to tackle complex challenges in the 
+                ever-envolving field of software engineering.
+            </p>
+            <a href="#" class="btn-box">More about me</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My<span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i class='bx bx-code' style='color:#7e959b' ></i>
+                        <h2>Web developing</h2>
+                        <p>I specialize in web development, seamlessly merging JavaScript, HTML, CSS, and Python to craft bespoke solutions for clients. My expertise lies in delivering tailored services that precisely meet the unique requirements of each project. With a keen eye for detail and a commitment to excellence, I transform concepts into interactive and visually appealing websites. My proficiency in scripting languages empowers me to create dynamic and responsive web applications, ensuring clients receive customized solutions that elevate their online presence.</p>
+                            <a href="#" class="read">Learn more</a>
+                    </div>
+
+                    <div>
+                        <i class='bx bxs-data' style='color:#7e959b'></i>
+                        <h2>Database Handling</h2>
+                        <p>As a database connectivity professional, I excel in PHP, SQL, MySQL, MongoDB, and Python. My commitment to punctuality underscores my respect for client time, ensuring timely delivery of services. With a robust knowledge base, I seamlessly bridge data systems, creating efficient and secure connections. I specialize in crafting streamlined solutions that optimize database functionality, providing clients with reliable and scalable architectures. Trust in my expertise for a seamless integration of technology, where precision meets punctuality to enhance your data-driven endeavors.</p>
+                            <a href="#" class="read">Learn more</a>
+                    </div>
+
+                    <div>
+                        <i class='bx bx-edit' style='color:#7e959b'  ></i>
+                        <h2>Photoshop Editing</h2>
+                        <p>A master in Adobe Photoshop, Illustrator, InDesign, and 3D Max, I elevate web aesthetics to unparalleled levels. With precision in editing, I transform digital landscapes, ensuring a fabulous surfing experience. From captivating visuals to seamless designs, my expertise enhances the visual storytelling of websites. Whether it's crafting compelling graphics, dynamic illustrations, or immersive 3D elements, my skills bring your digital presence to life. Elevate your online journey with my proficiency, where each edit is a brushstroke towards a visually stunning and user-centric web experience.</p>
+                            <a href="#" class="read">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="sub-title">My<span> Skills</span></h1>
+    <section>
+        <div class="container1" id="skills">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="technical-bars">
+                <div class="bar"><i class='bx bxl-html5' style='color:rgb(255, 0, 8)'  ></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                            <span></span>    
+                    </div>
+                </div>
+                <div class="bar"><i class='bx bxl-css3' style='color:rgb(0, 34, 255)'  ></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-javascript' style='color:rgb(255, 251, 0)'  ></i>
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line js">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-php' style='color:#ff0088'  ></i>
+                    <div class="info">
+                        <span>PHP</span>
+                    </div>
+                    <div class="progress-line php">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="bar"><i class='bx bxl-mongodb' style='color:#0dff00' ></i>
+                    <div class="info">
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="progress-line mongodb">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container1">
+            <h1 class="heading2">Professional Skills</h1>
+            <div class="radius-bars">
+                <div class="radius-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percantage">85%</div>
+                    <div class="text">Crativity</div>
+                </div>
+
+                <div class="radius-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percantage">80%</div>
+                    <div class="text">Communication Skill</div>
+                </div>
+
+                <div class="radius-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percantage">90%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+
+                <div class="radius-bar">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percantage">89%</div>
+                    <div class="text">Team Work</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="Portfolio" id="project">
+            <div class="main-text" id="project">
+                <h2>Latest<span>Projects</span></h2>
+                <div class="Portfolio-content">
+                    <div class="row">
+                        <img src="fp.jpg">
+                        
+                        <div class="layer">
+
+                            <h5>Fingerprint system</h5>
+                            <p>As a key contributor to a cutting-edge web-based fingerprint attendance system, I adeptly showcased my expertise in Java development, PHP, and Arduino. Taking charge of the seamless data flow between the physical Arduino system and the database, I played a pivotal role in ensuring accurate and efficient attendance tracking. Additionally, I demonstrated my proficiency in crafting a dynamic website, enhancing the user experience and functionality. My instrumental role in this project underscores my versatile skills in software and hardware integration, showcasing a commitment to excellence in technology-driven solutions.</p>
+                            
+                            <a href="#"><i class='bx bx-fingerprint' style='color:#121414'  ></i></a>
+                                
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact<span>Me</span></h2>
+            <h4>Let's make it different</h4>
+            <p>I am a professional web developer. You can find my personal email and contact number on the website, and feel free to explore my work on my social media profiles by clicking the links provided. If you need hassle-free web development services to elevate your business or personal portfolio, don't hesitate to reach out. I look forward to taking your online presence to the next level.</p>
+            
+            <div class="contact-list">
+                <li><i class='bx bx-send' style='color:#001aff' ></i>shanepererasl@icloud.com</li>
+                <li><i class='bx bx-phone' style='color:#001aff' ></i>0766068226</li>
+            </div>
+
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/profile.php?id=100089335065695"><i class='bx bxl-facebook'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/shane___perera/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/shane-perera-9394872b7/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form method="post" action="" name="contact-me">
+                <input type="text" name="Name" placeholder="Enter your Name" required>
+                <input type="email" name="email" placeholder="Enter your Email" required>
+                <input type="text" name="Number" placeholder="Enter Your Number" required>
+                <textarea  name="message" id="" cols="40" rows="10" placeholder="Enter you problem"></textarea>
+                <input type="submit" value="submit" class="send" id="submit">
+            </form>
+        </div>
+    </section>
+
+    <div class="last-text">
+        <p>Developed By Shane Perera © 2024</p>
+    </div>
+    <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+    <script src="script.js"></script>
+</body>
+</html>
